@@ -26,16 +26,44 @@
   position: relative;
 }
 
+/* 로딩 스크린 */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.loading-spinner {
+  font-size: 48px;
+  margin-bottom: 16px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
 @media (max-width: 768px) {
   .app-container {
     flex-direction: column;
   }
-  
+
   .left-panel {
     width: 100%;
     height: 50vh;
   }
-  
+
   .right-panel {
     width: 100%;
     height: 50vh;
