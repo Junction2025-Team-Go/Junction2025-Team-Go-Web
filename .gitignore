@@ -23,8 +23,16 @@ dist-ssr
 *.sln
 *.sw?
 
-# Environment variables
+# Environment variables - 절대 커밋하지 마세요!
 .env
 .env.local
 .env.production
+.env.development
+.env*.local
+
+# API Keys & Secrets
+**/secrets/
+*.pem
+*.key
+service-account*.json
 
